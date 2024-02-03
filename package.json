@@ -1,0 +1,46 @@
+{
+  "name": "lint-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:script": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
+    "lint:style": "stylelint src/**/*.{css,scss,vue}",
+    "lint": "npm run lint:script --fix && npm run lint:style --fix",
+    "format": "prettier --write src",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo \"[Husky] pre-commit\""
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.7.2",
+    "@types/node": "^20.11.14",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.21.1",
+    "husky": "^8.0.0",
+    "prettier": "3.2.4",
+    "stylelint": "^15.10.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "13.0.0",
+    "stylelint-config-recommended-scss": "^13.0.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard-scss": "^11.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-scss": "^5.2.1",
+    "typescript": "^5.3.3"
+  }
+}
